@@ -1,0 +1,4 @@
+mixin logo(imgSrc, imgAlt, imgTitle, linkTitle)
+ a.logo&attributes(attributes)
+  img.__img(src=`${imgSrc}` alt=`${imgAlt}` title=`${imgTitle}`)
+  block

@@ -1,0 +1,19 @@
+include ../../components/section-title/section-title
+include ../../components/section-descr/section-descr
+include ../../components/scene-1/scene-1
+include ../../components/img-scene-speed/img-scene-speed
+
+mixin speed()
+ section.speed
+  .container.container--speed
+   .row.row--margin-x--0
+    .col-md-6.col-sm-12.speed__col.speed__col--left
+     +scene-1
+      +img-scene-speed(src='assets/img/ill-4.jpg' alt='' title='')
+     +section-title Check Your Website Speed
+     +section-descr Distinctively exploit optimal alignments for intuitive bandwidth. Quickly coordinate e-business through revolutionary.
+      form.form.form--speed-test(action='/' method='post')
+       .speed-test__inputs-group
+        input#form-inp--web-url.form-inp.form-inp--web-url(type='text' placeholder='Web URL' value='' name='web-url')
+        input#form-inp--email-address.form-inp.form-inp--email-address(type='text' placeholder='Email Address' value='' name='email-address')
+       button#form-inp--email-address.form-btn.form-btn--speed-test(type='button' name='email-address') Submit

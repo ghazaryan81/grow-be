@@ -1,0 +1,169 @@
+@import '../../components/section-title/section-title';
+@import '../../components/section-descr/section-descr';
+@import '../../components/scene-1/scene-1';
+@import '../../components/img-scene-speed/img-scene-speed';
+
+.speed {
+ min-height: 541px;
+ @include padding-y(0, px-to-vw(132px));
+ // background: url(../img/speed.png) no-repeat center top;
+ .section-title {
+  @include padding-y(px-to-vw(181px), 0);
+ } // .speed .section-title
+ .section-descr {
+  margin-left: -2px;
+  max-width: 462px;
+  @include padding-y(12px, px-to-vw(56px));
+ } // .speed .section-descr
+} // .speed
+
+.speed-test {
+ display: block;
+ &__inputs-group {
+  padding-right: 27px;
+  display: flex;
+  width: 100%;
+ } // .speed-test__inputs-group
+} // .speed-test
+
+.form {
+ display: flex;
+ &--speed-test {
+  text-decoration: none;
+ } // .form--speed-test
+
+ &-inp {
+  padding: 16px 20px;
+  display: block;
+  width: 100%;
+  color: var(--text-2);
+  background: var(--input-bg);
+  border: 0;
+  border-radius: 0;
+  @include font(15px, 150%, 600);
+  @include placeholder {
+   @include font(11px, 150%, 500);
+  } // .form-inp @include placeholder
+
+  &--web-url {
+   border-right: solid $input-border 1px;
+   border-top-left-radius: var(--btn-radius);
+   border-bottom-left-radius: var(--btn-radius);
+  } // .form-inp--web-url
+  &--email-address {
+   border-top-right-radius: var(--btn-radius);
+   border-bottom-right-radius: var(--btn-radius);
+  } // .form-inp--email-address
+ } // .form-inp
+
+ &-btn {
+  padding: 15px 48px 15px 49px;
+  display: inline-block;
+  color: var(--btn-1-txt);
+  background: var(--btn-1-bg);
+  border: 0;
+  border-radius: 50px;
+  box-shadow: var(--btn-shadow);
+  @include font(13px, 150%, 700);
+  @include transition(background);
+  &:hover {
+   background: var(--btn-1-bg--hover);
+  } // .form-btn:hover
+ } // .form-btn
+} // .form
+
+.speed {
+ @include xl {
+  .scene__img--speed {
+   top: 85px;
+   text-align: center;
+  } // .speed @include xl .scene__img--speed
+ } // .speed @include xl
+ @include lg {
+  .section-title {
+   padding-top: 80px;
+  } // .speed @include lg .section-title
+
+  .speed-test__inputs-group {
+   display: block;
+  } // .speed @include lg .speed-test__inputs-group
+  .form {
+   display: block;
+  } // .speed @include lg .form
+  .speed-test {
+   padding-top: 20px;
+  } // .speed @include lg .speed-test
+
+  .form-inp--email-address,
+  .form-inp--web-url {
+   margin-bottom: 5px;
+   border-radius: var(--btn-radius);
+  } // .speed @include lg .form-inp--web-url
+
+  .form--speed-test {
+   display: block;
+   width: 100%;
+  } // .speed @include lg .form--speed-test
+ } // .speed @include lg
+ @include md {
+  .speed-test__inputs-group {
+   padding-right: 0;
+  } // .speed @include md .speed-test__inputs-group
+  .speed__col--left {
+   display: flex;
+   flex-wrap: wrap;
+  } // .speed @include md .speed__col--left
+  .scene {
+   margin-top: 20px;
+   order: 2;
+  } // .speed @include md .scene
+  .section-title {
+   order: 1;
+  } // .speed @include md .section-title
+  .section-descr {
+   order: 3;
+  } // .speed @include md .section-descr
+  .speed-test {
+   order: 4;
+   width: 100%;
+  } // .speed @include md .speed-test
+  .section-title {
+   padding-top: 80px;
+  } // .speed @include md .section-title
+
+  .scene {
+   width: 100%;
+   @include p(relative);
+  } // .speed @include md .scene
+  .scene__wide {
+   width: 100%;
+   text-align: center;
+   @include p(relative);
+  } // .speed @include md .scene__wide
+  .scene__img {
+   margin: 0 auto;
+   width: 80%;
+   @include p(relative);
+  } // .speed @include md .scene__img
+  .section-title {
+   padding-top: 0;
+  } // .speed @include md .section-title
+ } // .speed @include md
+} // .speed
+
+.speed {
+ @include md {
+  .scene-1 {
+   order: 1;
+  } // .speed @include md .scene-1
+  .section-title {
+   order: 0;
+  } // .speed @include md .section-title
+  .section-descr {
+   order: 2;
+  } // .speed @include md .section-descr
+  .form--speed-test {
+   order: 3;
+  } // .speed @include md .form--speed-test
+ } // .speed @include md
+} // .speed

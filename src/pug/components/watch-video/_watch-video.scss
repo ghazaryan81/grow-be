@@ -1,0 +1,26 @@
+.watch-video {
+ padding: 14px 27px 17px 50px;
+ display: inline-block;
+ white-space: nowrap;
+ color: var(--text-3);
+ border-radius: var(--btn-radius);
+ @include font(15px, 19px, 700);
+ @include p(relative);
+ @include transition(color, background);
+
+ &:hover {
+  color: var(--btn-1-txt);
+  background: var(--brand-3_1);
+  box-shadow: 4px 4px 8px rgba(242, 88, 34, 0.2);
+  .play-btn {
+   // .watch-video:hover .playy-btn use
+   border-color: var(--btn-1-txt);
+   use {
+    fill: var(--btn-1-txt);
+   } // .watch-video:hover .play-btn use
+  } // .watch-video:hover .play-btn
+ } // .watch-video:hover
+ .play-btn {
+  @include p(absolute, 10px, 8px);
+ } // .watch-video .play-btn
+} // .watch-video

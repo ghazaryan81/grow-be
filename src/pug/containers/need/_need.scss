@@ -1,0 +1,82 @@
+@import '../../components/section-title/section-title';
+@import '../../components/section-descr/section-descr';
+@import '../../components/article-title/article-title';
+@import '../../components/article-descr/article-descr';
+@import '../../components/svg-sprite/svg-sprite';
+@import '../../components/btn-link/btn-link';
+@import '../../components/promote/promote';
+@import '../../components/scene-1/scene-1';
+@import '../../components/scene-3/scene-3';
+@import '../../components/img-scene-need/img-scene-need';
+
+.need {
+ // background: url(../img/need2.jpg) no-repeat center top;
+ &__col {
+  text-decoration: none;
+  // min-height: 827px;
+ } // .need__col
+} // .need
+
+.need {
+ .section-title {
+  padding-top: px-to-vw(95px);
+ } // .need .section-title
+ .section-descr {
+  padding-top: 22px;
+ } // .need .section-descr
+} // .need
+
+.need {
+ @include lg {
+  .ic {
+   margin: 0 auto;
+  } // .need @include lg .ic
+  .promote {
+   display: block;
+   text-align: center;
+  } // .need @include lg .promote
+  .promote__right {
+   padding-top: 0;
+   padding-left: 23px;
+   width: 100%;
+  } // .need @include lg .promote__right
+
+  .promote__left {
+   width: 100%;
+  } // .need @include lg .promote__left
+ } // .need @include lg
+ @include md {
+  .need__col--right {
+   display: flex;
+   flex-wrap: wrap;
+   .section-title {
+    order: 0;
+   } // .need @include md .need__col--right .section-title
+   .scene-3 {
+    order: 1;
+   } // .need @include md .need__col--right .scene-3
+   .section-descr {
+    order: 2;
+   } // .need @include md .need__col--right .section-descr
+   .promote-list {
+    order: 3;
+   } // .need @include md .need__col--right .promote-list
+  } // .need @include md .need__col--right
+
+  .scene-3 {
+   width: 100%;
+   @include p(relative);
+   &__img {
+    width: 100%;
+    @include p(relative);
+   } // .need @include md .scene-3__img
+   &__wide {
+    width: 100%;
+    @include p(relative);
+   } // .need @include md .scene-3__wide
+  } // .need @include md .scene-3
+  .section-title {
+   padding-top: 0;
+  } // .need @include md .section-title
+ } // .need @include md
+} // .need

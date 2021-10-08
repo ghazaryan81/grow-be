@@ -1,0 +1,23 @@
+.ic {
+ font-style: normal;
+ @include flex-center;
+ &--radius {
+  border-radius: 15px;
+  @include size(70px);
+ } // .ic--radius
+
+ &--circle {
+  border-radius: 50px;
+  @include size(100px);
+ } // .ic--circle
+
+ &--light-orange {
+  background: var(--ic-bg--light-orange);
+ } // .ic--light-orange
+ &--light-green {
+  background: var(--ic-bg--light-green);
+ } // .ic--light-green
+ &--light-yellow {
+  background: var(--ic-bg--light-yellow);
+ } // .ic--light-yellow
+} // .ic

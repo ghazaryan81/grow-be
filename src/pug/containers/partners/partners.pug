@@ -1,0 +1,8 @@
+mixin partners(partners)
+ section.partners
+  .container.container--partners
+   .row.row--margin-x--0
+    each it in partners
+     .col-lg-2.col-md-4.col-sm-6.d-flex.justify-content-center.align-items-center.partners__item
+      img.partners__img(src=`${'assets/img/svg/partners/'+it.img}` alt='' title='')
+

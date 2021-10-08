@@ -1,0 +1,43 @@
+@import '../../components/section-title/section-title';
+@import '../../components/section-descr/section-descr';
+@import '../../components/segment-title/segment-title';
+@import '../../components/segment-descr/segment-descr';
+@import '../../components/btn-link/btn-link';
+@import '../../components/panel/panel';
+
+.choose {
+ padding-bottom: 72px;
+ background-color: var(--section-choose-bg);
+ // min-height: 919px;
+ // background: url(../img/choose.png) no-repeat center top var(--section-choose-bg);
+} // .choose
+
+.choose {
+ .section-title {
+  padding-top: px-to-vw(88px);
+  text-align: center;
+ } // .choose .section-title
+ .section-descr {
+  margin: 0 auto;
+  max-width: 692px;
+  text-align: center;
+  @include padding-y(22px, 28px);
+ } // .choose .section-descr
+ &__item {
+  @include padding-y(28px);
+ } // .choose__item
+} // .choose
+
+.choose {
+ .segment-title {
+  padding-top: 25px;
+  text-align: center;
+ } // .choose .segment-title
+ .segment-descr {
+  text-align: center;
+  @include padding-y(23px, 30px);
+ } // .choose .segment-descr
+ .panel__space {
+  text-align: center;
+ } // .choose .panel__space
+} // .choose

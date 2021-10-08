@@ -1,0 +1,47 @@
+@import '../../components/svg-sprite/svg-sprite';
+@import '../../components/read-more-link/read-more-link';
+@import '../../components/segment-descr/segment-descr';
+@import '../../components/segment-title/segment-title';
+@import '../../components/ic/ic';
+
+.privilege {
+ @include padding-y(px-to-vw(100px), px-to-vw(70px));
+
+ // min-height: 491px;
+ // background: url(../img/privilegy.png) no-repeat calc(50% - 1px) top;
+ &__item {
+  margin-bottom: 32px;
+  padding: 40px 30px 27px 30px;
+  background: $brand-7_1;
+  box-shadow: $panel-shadow;
+ } // .privilege__item
+} // .privilege
+.privilege {
+ @include md {
+  .ic {
+   margin: 0 auto;
+  } // .privilege @include md .ic
+  .segment-title {
+   text-align: center;
+  } // .privilege @include md .segment-title
+  .segment-descr {
+   text-align: center;
+  } // .privilege @include md .segment-descr
+  .panel--privilege {
+   text-align: center;
+  } // .privilege @include md .panel--privilege
+ } // .privilege @include md
+
+ .segment-title {
+  margin-left: -2px;
+  padding-top: 23px;
+ } // .privilege .segment-title
+ .segment-descr {
+  margin-left: -3px;
+  @include padding-y(18px, 16px);
+ } // .privilege .segment-descr
+
+ .read-more-link {
+  margin-left: -2px;
+ } // .privilege .read-more-link
+} // .privilege

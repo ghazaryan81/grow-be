@@ -1,0 +1,12 @@
+.img-scene-solutions {
+ position: absolute;
+ top: px-to-vw(95px);
+ left: 51.11%;
+ width: px-to-vw(600px);
+ max-width: 600px;
+ @include md {
+  margin-top: 30px;
+  width: 100%;
+  @include p(relative);
+ } // .scene-1__img--solutions @include md
+} // .wrapper

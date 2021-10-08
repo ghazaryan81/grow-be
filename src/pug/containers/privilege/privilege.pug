@@ -1,0 +1,18 @@
+include ../../components/svg-sprite/svg-sprite
+include ../../components/read-more-link/read-more-link
+include ../../components/segment-descr/segment-descr
+include ../../components/segment-title/segment-title
+include ../../components/ic/ic
+
+mixin privilege(privilege)
+ section.privilege
+  .container.container--privilege
+   .row.row--margin-x--0
+    each it in privilege
+     .col-md-4.col-sm-12
+      div.privilege__item
+       +ic().ic.ic--radius(class=`ic--${it.color}`)
+        +svg-sprite(it.icon).arrow-down(width=`${it.icon_width}` viewBox='0 0 32 32')
+       +segment-title() #{it.title}
+       +segment-descr() #{it.descr}
+       +read-more-link(href="#") Read More...

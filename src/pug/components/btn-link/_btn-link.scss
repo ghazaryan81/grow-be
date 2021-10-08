@@ -1,0 +1,30 @@
+.btn-link {
+ padding: 14px 27px 14px 27px;
+ display: inline-block;
+ white-space: nowrap;
+ text-decoration: none;
+ color: var(--text-3);
+ border-radius: var(--btn-radius);
+ @include font(12px, 14px, 700, 0.3px);
+ @include transition(background, color, box-shadow);
+ &:hover {
+  color: var(--btn-1-txt);
+  background: var(--btn-2-bg--hover);
+  box-shadow: none;
+ } // .btn-link:hover
+
+ &--fill {
+  color: var(--btn-1-txt);
+  background: var(--btn-1-bg);
+  &:hover {
+   color: var(--btn-1-txt);
+   background: var(--btn-2-bg--hover);
+  } // .btn-link--fill:hover
+ } // .btn-link--fill
+
+ &--large {
+  padding: 15px 36px 16px;
+  box-shadow: var(--large-btn-shadow);
+  @include font(15px, 19px);
+ } // .btn-link--large
+} // .btn-link

@@ -1,0 +1,22 @@
+$font-path: '../fonts/playfair/';
+$font-family: Playfair;
+$font-weight: 700;
+$font-file-names: PlayfairDisplay-Bold;
+@each $font-file-name in $font-file-names {
+ $src: $font-path + $font-file-name;
+ $i: index($font-file-names, $font-file-name);
+ // csscomb:ignore:start
+ /* prettier-ignore */
+ @font-face {
+    font-family: $font-family;
+    font-weight: nth($font-weight, $i);
+    src: url($src + '.eot');
+    src: url($src + '.eot?#iefix') format('embedded-opentype'),
+    url($src + '.woff2') format('woff2'),
+    url($src + '.woff') format('woff'),
+    url($src + '.ttf') format('truetype'),
+    url($src + '.otf') format('opentype'),
+    url($src + '.svg') format('svg');
+  } // @each $name in $list @font-face
+} // @each $name in $list
+// csscomb:ignore:end

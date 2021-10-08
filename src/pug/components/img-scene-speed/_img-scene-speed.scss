@@ -1,0 +1,13 @@
+.img-scene-speed {
+ position: absolute;
+ top: 0;
+ left: 54%;
+ margin-top: 33px;
+ width: px-to-vw(595px);
+ max-width: 100%;
+ @include md {
+  margin-top: 30px;
+  width: 100%;
+  @include p(relative);
+ } // .scene-1__img--solutions @include md
+} // .img-scene-speed

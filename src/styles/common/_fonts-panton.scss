@@ -1,0 +1,17 @@
+$font-path: '../fonts/panton/';
+$list: 'Panton-Regular' 'Panton-SemiBold' 'Panton-Bold' 'Panton-ExtraBold';
+$fontWeight: normal, 600, bold, 800;
+@each $name in $list {
+ $src: $font-path + $name;
+ /* prettier-ignore */
+ @font-face {
+  src: url($src + '.eot');
+  src: url($src + '.eot?#iefix') format('embedded-opentype'),
+       url($src + '.woff2') format('woff2'),
+       url($src + '.woff') format('woff'),
+       url($src + '.ttf') format('truetype'),
+       url($src + '.otf') format('opentype'),
+       url($src + '.svg') format('svg');
+  font-family: $name;
+ }
+}

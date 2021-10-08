@@ -1,0 +1,13 @@
+include ../../components/logo/logo
+include ../../components/list-links-1/list-links-1
+include ../../components/btn-link/btn-link
+
+mixin header(menu)
+ header.header
+  .container.container--header
+   .row.row--margin-x--0
+    .col-12.d-flex.justify-content-between.position-relative
+     +logo('assets/img/svg/logo.svg', 'imgAlt', 'imgTitle', 'linkTitle')
+     .d-flex.justify-content-end.align-items-center
+      +list-links-1(menu)
+      +btn-link.btn-link.btn-link--fill.btn-link__header(href='#') Get Started

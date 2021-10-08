@@ -1,0 +1,12 @@
+.section-descr {
+ $font-size-map: (
+  1200px: 16px,
+  752px: 14px,
+ );
+ color: var(--text-2);
+ @include font(16px, 150%, 500);
+ @include fluid('font-size', $font-size-map);
+ @include xl {
+  line-height: 140%;
+ } // .section-descr @include xl
+} // .section-descr

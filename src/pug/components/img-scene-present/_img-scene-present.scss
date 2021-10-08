@@ -1,0 +1,32 @@
+/* .img-scene-present {
+ position: absolute;
+ top: px-to-vw(21px);
+ left: 51.59%;
+ width: px-to-vw(843px);
+ max-width: 100%;
+ @include md {
+  margin-top: 30px;
+  width: 100%;
+  @include p(relative);
+ }
+}
+ */
+
+.img-scene-present {
+ position: absolute;
+ transform: translate(0, 3vw);
+ margin-top: 3vh;
+ // top: -50vh;
+ // margin-top: -50%;
+ // margin-top: 50%;
+ // top: px-to-vw(21px);
+ left: 51.59%;
+ // top: 1.9444444444444444vh;
+ width: px-to-vw(843px);
+ max-width: 100%;
+ @include md {
+  margin-top: 30px;
+  width: 100%;
+  @include p(relative);
+ }
+}

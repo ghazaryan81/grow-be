@@ -1,0 +1,21 @@
+@import '../../components/section-title/section-title';
+@import '../../components/section-descr/section-descr';
+
+// .testimonials
+.testimonials {
+ display: block;
+ min-height: 675px;
+ .section-title {
+  margin-top: 21px;
+  padding-top: px-to-vw(70px);
+  @include lh-crop(1.5);
+ } // .testimonials .section-title
+
+ .section-descr {
+  margin: 0 auto;
+  margin-top: 17px;
+  padding-top: px-to-vw(17px);
+  max-width: px-to-vw(500px);
+  @include lh-crop(2.44);
+ } // .testimonials .section-descr
+} // .testimonials

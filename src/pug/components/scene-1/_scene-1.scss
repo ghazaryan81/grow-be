@@ -1,0 +1,11 @@
+.scene-1 {
+ @include p(relative);
+ &__wide {
+  width: calc(200% + 32px);
+  @include p(absolute);
+  @include md {
+   width: 100%;
+   @include p(relative);
+  } // .scene-1__wide @include md
+ } // .scene-1__wide
+} // .scene-1

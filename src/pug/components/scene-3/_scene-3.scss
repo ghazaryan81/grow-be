@@ -1,0 +1,23 @@
+.scene-3 {
+ width: 100%;
+ @include p(relative);
+ &__wide {
+  position: absolute;
+  left: calc(-100% - 32px);
+  width: calc(200% + 32px);
+ } // .scene-3__wide
+ &__img {
+  user-select: none;
+
+  -webkit-touch-callout: none;
+  &--need {
+   width: px-to-vw(803px);
+   @include ptr(absolute, 0, 51%);
+   @include md {
+    margin-top: 30px;
+   } // .scene-3__img--need @include md
+   // opacity: 0.5;
+  } // .scene-3__img--need
+ } // .scene-3__img
+ // .scene-3__img
+} // .scene-3

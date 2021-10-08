@@ -1,0 +1,49 @@
+include ../../components/svg-sprite/svg-sprite
+
+mixin footer(footerCompany, footerServices)
+ footer.footer
+  .container.container--footer-1
+   .row.row--margin-x--0
+    .col-12
+     .footer__row
+      .footer__col.footer__col--1
+       a.large-logo(href='#')
+        img.large-logo__img(src='assets/img/svg/logo-large.svg' alt='' title='')
+       .short-descr Distinctively exploit optimal alignments for intuitive bandwidth. Quickly coordinate business through revolutionary.
+       .list-soc-icons
+        a.soc-ic(href='#')
+         +svg-sprite('icon-facebook').arrow-down(width='13' viewBox='0 0 32 32')
+        a.soc-ic(href='#')
+         +svg-sprite('icon-twitter').arrow-down(width='12.01' viewBox='0 0 32 32')
+        a.soc-ic(href='#')
+         +svg-sprite('icon-linkedin').arrow-down(width='12' viewBox='0 0 32 32')
+        a.soc-ic(href='#')
+         +svg-sprite('icon-google').arrow-down(width='12.34' viewBox='0 0 32 32')
+
+      .footer__col.footer__col--2
+       h4.title-4 Our Company
+       ul.list-1
+        each it in footerCompany
+         li.__it
+          a.__it-link(href=`${it.href}`) #{it.title}
+
+      .footer__col.footer__col--3
+       h4.title-4 Our Services
+       ul.list-1
+        each it in footerServices
+         li.__it
+          a.__it-link(href=`${it.href}`) #{it.title}
+
+      .footer__col.footer__col--4
+       h4.title-4 Contact Us
+       .short-descr
+        span.dark-txt Location:
+        | 1370 Orvilly Rot APT, New York, USA #[br]
+        span.dark-txt Email:
+        | growbeinfo@gmail #[br]
+        span.dark-txt Phone:
+        | +324-9332-5018 #[br]
+  .container.container--footer-2
+   .row.row--margin-x--0
+    .col-12
+     .copy-right Copyright © GrowBe 2021. All Rights Reserved.

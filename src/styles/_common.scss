@@ -1,0 +1,76 @@
+// csscomb:ignore:start
+/* prettier-ignore */
+@import 'common/variables',
+        'common/mixins',
+        'common/smooth-scrollbar',
+        // 'common/fonts-gilroy',
+        'common/scroll',
+        'common/grid-home',
+        '../../node_modules/bootstrap/scss/bootstrap-grid',
+        '../../node_modules/sass-rem/rem',
+        'common/base',
+        'common/media',
+        'common/base',
+        'common/extends';
+// csscomb:ignore:end
+
+::-moz-selection {
+ color: var(--select-text);
+ background: var(--select-text-bg);
+} // ::-moz-selection
+
+::selection {
+ color: var(--select-text);
+ background: var(--select-text-bg);
+} // ::selection
+
+.row.no-gutter [class*='col-']:first-child,
+.row.no-gutter [class*='col-']:last-child {
+ @include padding-x(0);
+} // .row.no-gutter [class*='col-']:last-child
+
+.row.no-cols-gutter [class*='col-'],
+.row.no-cols-gutter [class*='col-'] {
+ @include padding-x(0);
+} // .row.no-cols-gutter [class*='col-']
+
+a {
+ text-decoration: none;
+ @include transition(color);
+
+ &:hover {
+  text-decoration: none;
+ } // a:hover
+} // a
+
+body,
+html {
+ text-size-adjust: 100%;
+ text-rendering: optimizeLegibility;
+
+ -webkit-font-smoothing: antialiased;
+ text-decoration-skip: objects;
+ -webkit-tap-highlight-color: transparent;
+ scroll-behavior: smooth;
+} // html
+
+a,
+input,
+button,
+select,
+option {
+ font-family: inherit;
+} // option
+
+button:not([disabled]),
+a[role='button']:not([disabled]) {
+ cursor: pointer;
+} // a[role='button']:not([disabled])
+
+.visually-hidden {
+ margin: -1px;
+ overflow: hidden;
+ clip: rect(0 0 0 0);
+ @include p(absolute);
+ @include size(1px);
+} // .visually-hidden

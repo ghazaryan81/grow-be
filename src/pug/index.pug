@@ -1,0 +1,35 @@
+extends layout.pug
+
+include components/wrapper/wrapper
+
+include containers/header/header
+include containers/present/present
+include containers/partners/partners
+include containers/solutions/solutions
+include containers/privilege/privilege
+include containers/choose/choose
+include containers/need/need
+include containers/result/result
+include containers/speed/speed
+include containers/plans/plans
+include containers/team/team
+include containers/footer/footer
+include containers/testimonials/testimonials
+include db
+
+block content
+ +wrapper
+  //- +testimonials
+
+  //- +header(menu)
+  +present
+  +partners(partners)
+  +solutions()
+  +privilege(privilege)
+  +choose(choose)
+  +need(need)
+  +result(result)
+  +speed()
+  +team(team)
+  +footer(footerCompany, footerServices)
+  //- +plans()

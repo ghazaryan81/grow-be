@@ -1,0 +1,4 @@
+.article-title {
+ color: var(--title-1);
+ @include font(20px, 150%, 700);
+} // .article-title

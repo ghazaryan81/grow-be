@@ -1,0 +1,37 @@
+@import '../../components/section-title/section-title';
+@import '../../components/section-descr/section-descr';
+@import '../../components/scene-1/scene-1';
+@import '../../components/btn-link/btn-link';
+@import '../../components/img-scene-solutions/img-scene-solutions';
+
+.solutions {
+ padding-bottom: px-to-vw(128px);
+ background: var(--brand-7_2);
+ .section-title {
+  padding-top: px-to-vw(140px - 17px);
+  padding-right: px-to-vw(60px);
+ } // .solutions .section-title
+ .section-descr {
+  @include padding-y(px-to-vw(40px - 17px), px-to-vw(36px));
+ } // .solutions .section-descr
+} // .solutions
+
+.solutions {
+ @include md {
+  padding-right: 0;
+  .section-title {
+   z-index: 1;
+   margin-top: -45px;
+   padding-top: 0;
+   padding-right: 0;
+   @include p(relative);
+  } // .solutions @include md .section-title
+ } // .solutions @include md
+} // .solutions
+
+.container {
+ // container
+ &--solutions {
+  text-decoration: none;
+ } // .container--solutions
+} // .container

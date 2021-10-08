@@ -1,0 +1,10 @@
+.hamburger {
+ $path: 'M0 0H19V2H0V0Z M0 4H19V6H0V4Z M0 8H19V10H0V8Z';
+ cursor: pointer;
+ @include svg-bg($path, $brand-1_1_rgba, 0 0 19 10, 19, 10);
+ @include size(19px, 10px);
+ @include transition(background);
+ &:hover {
+  @include svg-bg($path, $brand-2_1_rgba, 0 0 19 10, 19, 10);
+ } // .hamburger:hover
+} // .hamburger

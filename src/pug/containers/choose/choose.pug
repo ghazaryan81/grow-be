@@ -1,0 +1,27 @@
+include ../../components/section-title/section-title
+include ../../components/section-descr/section-descr
+include ../../components/segment-title/segment-title
+include ../../components/segment-descr/segment-descr
+include ../../components/btn-link/btn-link
+//- panel
+
+mixin choose(choose)
+ section.choose
+  .container
+   .row.row--margin-x--0
+    .col-12
+     +section-title Why You Should Choose Us.
+     +section-descr
+      | Distinctively exploit optimal alignments for intuitive bandwidth. Quickly coordinate e-business applications through revolutionary catalysts.
+  .container
+   .row.row--margin-x--0
+    each it in choose
+     .col-md-4.col-sm-12.d-flex.justify-content-center.align-items-start.choose__item
+      .panel.panel--choose
+       figure.panel__figure
+        a.panel__figure-img-link(href='#')
+         img.panel__figure-img(src=`${'assets/img/' + it.imgSrc}` alt='' title='')
+       .panel__space
+        +segment-title #{it.title}
+        +segment-descr #{it.descr}
+        +btn-link.btn-link--fill.btn-link--large(href='#') Learn More

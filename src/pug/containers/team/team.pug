@@ -1,0 +1,27 @@
+include ../../components/section-title/section-title
+include ../../components/section-descr/section-descr
+
+mixin team(team)
+ section.team
+  .container.container--team-1
+   .row.row--margin-x--0
+    .col-12
+     +section-title.text-center Our Expert Team Members
+     +section-descr.text-center This new-found knowledge may then be used by engineers to create new tools and machines.
+  .container.container--team-2
+   .row.row--margin-x--0
+    each it in team
+     .col-lg-3.col-md-6
+      .team-item
+       img.team-item__img(src=`assets/img/${it.imgSrc}`)
+       h3.team-item__title #{it.title}
+       p.team-item__position #{it.descr}
+       .list-soc-icons
+        a.soc-ic(href='#')
+         +svg-sprite('icon-facebook').arrow-down(width='13' viewBox='0 0 32 32')
+        a.soc-ic(href='#')
+         +svg-sprite('icon-twitter').arrow-down(width='12.01' viewBox='0 0 32 32')
+        a.soc-ic(href='#')
+         +svg-sprite('icon-linkedin').arrow-down(width='12' viewBox='0 0 32 32')
+        a.soc-ic(href='#')
+         +svg-sprite('icon-google').arrow-down(width='13.34' viewBox='0 0 32 32')

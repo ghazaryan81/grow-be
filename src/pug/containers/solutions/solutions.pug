@@ -1,0 +1,20 @@
+include ../../components/section-title/section-title
+include ../../components/section-descr/section-descr
+include ../../components/btn-link/btn-link
+include ../../components/scene-1/scene-1
+include ../../components/img-scene-solutions/img-scene-solutions
+
+mixin solutions()
+ section.solutions
+  .container.container--solutions
+   .row.row--margin-x--0
+    .col-md-6.col-sm-12.solution__col.solution__col--left
+     +scene-1
+      +img-scene-solutions(src='assets/img/ill-1-1.png' alt='' title='')
+     +section-title
+      | Perfect Solution For Your Business
+     +section-descr
+      | Distinctively exploit optimal alignments for intuitive bandwidth. Quickly
+      | coordinate e-business applications through revolutionary catalysts for
+      | chang the Seamlessly underwhelm optimal testing procedures.
+     +btn-link.btn-link.btn-link--fill.btn-link--large(href='#') Learn More

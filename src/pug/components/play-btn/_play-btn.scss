@@ -1,0 +1,11 @@
+.play-btn {
+ border: solid var(--play-btn-outline) 3px !important;
+ border-radius: 50%; // .play-btn use
+ @include flex-center;
+ @include size(30px);
+ @include transition(border, fill);
+ use {
+  fill: var(--play-btn-fill);
+  @include transition(fill);
+ } // .play-btn use
+} // .play-btn

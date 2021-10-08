@@ -1,0 +1,34 @@
+@import '../../components/main-title/main-title';
+@import '../../components/main-descr/main-descr';
+@import '../../components/watch-video/watch-video';
+@import '../../components/play-btn/play-btn';
+@import '../../components/scene-1/scene-1';
+@import '../../components/svg-sprite/svg-sprite';
+@import '../../components/btn-link/btn-link';
+@import '../../components/img-scene-present/img-scene-present';
+
+.present {
+ padding-bottom: px-to-vw(135px);
+ display: block;
+ .main-title {
+  padding-top: px-to-vw(135px - 17px);
+ } // .present .main-title
+ .main-descr {
+  @include padding-y(px-to-vw(36px - 17px), px-to-vw(40px));
+ } // .present .main-descr
+ .watch-video {
+  margin-left: 18px;
+ } // .present .watch-video
+} // .present
+
+.present {
+ @include lg {
+  .present__btns {
+   text-align: center;
+  } // .present @include lg .present__btns
+  .watch-video {
+   margin-top: 20px;
+   margin-left: 3px;
+  } // .present @include lg .watch-video
+ } // .present @include lg
+} // .present

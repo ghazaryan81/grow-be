@@ -1,0 +1,86 @@
+@import '../svg-sprite/svg-sprite';
+
+.list-links-1 {
+ .dd-mark:hover {
+  .dd {
+   display: block;
+  } // .list-links-1 .dd-mark:hover .dd
+ } // .list-links-1 .dd-mark:hover
+ & > .__ul > .__li {
+  @include padding-x(17px, 18px);
+  @include xl {
+   @include padding-x(get-vw(strip-unit($xl-cw), 17px), get-vw(strip-unit($xl-cw), 18px));
+  } // .list-links-1 > .__ul > .__li @include xl
+ } // .list-links-1 > .__ul > .__li
+ & > .__ul > .__li > .__a {
+  display: inline-block;
+  white-space: nowrap;
+  color: var(--link-1);
+  @include font(14px, 17px, 600);
+  @include transition(color);
+  .arrow-down {
+   @include ptr(absolute, calc(50% - 1px), -14px);
+   use {
+    fill: var(--link-1);
+    @include transition(fill);
+   } // .list-links-1 > .__ul > .__li > .__a .arrow-down use
+  } // .list-links-1 > .__ul > .__li > .__a .arrow-down
+  &:hover {
+   color: var(--link-1--hover);
+   .arrow-down {
+    use {
+     fill: var(--link-1--hover);
+    } // .list-links-1 > .__ul > .__li > .__a:hover .arrow-down use
+   } // .list-links-1 > .__ul > .__li > .__a:hover .arrow-down
+  } // .list-links-1 > .__ul > .__li > .__a:hover
+ } // .list-links-1 > .__ul > .__li > .__a
+} // .list-links-1
+
+.dd {
+ display: none;
+ width: 100%;
+ z-index: 1;
+ @include p(absolute);
+ &__inner {
+  margin-top: 0;
+  background-color: $brand-7_1;
+  border-radius: 15px;
+  box-shadow: 0 0 53px 0 rgba($brand-1_1, 0.07);
+  transform: translate(-25%, 0);
+  @include sizeMh(230px, 250px);
+  @include p(relative, 40px, 0);
+  &:before {
+   z-index: 1;
+   display: block;
+   content: '';
+   border-width: 0 15px 15px 15px;
+   border-style: solid;
+   border-color: transparent transparent $brand-7_1 transparent;
+   transform: translate(-50%, 0);
+   @include p(absolute, -15px, 50%);
+   @include size(0);
+  } // .dd__inner:before
+
+  ul.__ul {
+   display: block;
+   @include padding-y(25px, 35px);
+  } // .dd__inner ul.__ul
+  li.__li {
+   padding: 0 20px;
+   display: block;
+  } // .dd__inner li.__li
+  a.__a {
+   padding: 10px 20px;
+   display: block;
+   white-space: nowrap;
+   color: var(--link-1);
+   border-bottom: dashed $brand-7_4 1px;
+   @include font(14px, 17px, 600);
+   @include transition(color, background);
+   &:hover {
+    color: $brand-2_1;
+    background-color: $brand-7_5;
+   } // .dd__inner a.__a:hover
+  } // .dd__inner a.__a
+ } // .dd__inner
+} // .dd

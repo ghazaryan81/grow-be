@@ -1,0 +1,15 @@
+.scene-2 {
+ width: 100%;
+
+ @include p(relative);
+ &__wide {
+  width: calc(200% + 32px);
+
+  @include p(absolute, 0, calc(-100% - 32px));
+ } // .scene-2__wide
+ &__img {
+  width: 83.33%;
+
+  @include p(absolute, 0, -32%);
+ } // .scene-2__img
+} // .scene-2

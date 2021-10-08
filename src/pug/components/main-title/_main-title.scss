@@ -1,0 +1,16 @@
+.main-title {
+ $font-size-map: (
+  1200px: 60px,
+  1021px: 40px,
+  368px: 24px,
+ );
+ color: var(--title-1);
+
+ @include font(60px, 74px, 700);
+
+ @include fluid('font-size', $font-size-map);
+
+ @include xl {
+  line-height: 130%;
+ } // .main-title @include xl
+} // .main-title

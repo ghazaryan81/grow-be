@@ -1,0 +1,30 @@
+.panel {
+ display: block;
+ width: 100%;
+ background-color: var(--panel-bg);
+ box-shadow: var(--panel-shadow);
+ &--privilege {
+  padding: 40px 30px 26px;
+ } // .panel--privilege
+ &--choose {
+  padding-bottom: 50px;
+ } // .panel--choose
+
+ &__figure {
+  display: block;
+ } // .panel__figure
+
+ &__figure-img-link {
+  display: block;
+ } // .panel__figure-img-link
+
+ &__figure-img {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+ } // .panel__figure-img
+
+ &__space {
+  padding: 0 30px;
+ } // .panel__space
+} // .panel

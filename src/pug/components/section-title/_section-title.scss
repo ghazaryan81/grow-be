@@ -1,0 +1,13 @@
+.section-title {
+ $font-size-map: (
+  1200px: 45px,
+  1104px: 35px,
+  752px: 25px,
+ );
+ color: var(--title-1);
+ @include font(45px, 56px, 700);
+ @include fluid('font-size', $font-size-map);
+ @include xl {
+  line-height: 140%;
+ } // .section-title @include xl
+} // .section-title

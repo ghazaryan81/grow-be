@@ -1,0 +1,32 @@
+include ../../components/section-title/section-title
+include ../../components/section-descr/section-descr
+include ../../components/article-title/article-title
+include ../../components/article-descr/article-descr
+include ../../components/svg-sprite/svg-sprite
+include ../../components/scene-1/scene-1
+include ../../components/btn-link/btn-link
+include ../../components/promote/promote
+include ../../components/scene-1/scene-1
+include ../../components/scene-3/scene-3
+include ../../components/img-scene-need/img-scene-need
+
+mixin need(need)
+ section.need
+  .container.container--need
+   .row.row--margin-x--0
+    .col-md-6.col-sm-12.need__col.need__col--left
+    .col-md-6.col-sm-12.need__col.need__col--right.position-relative
+     +scene-3
+      +img-scene-need(src='assets/img/need-ill2.jpg' alt='' title='')
+     +section-title You may ask what #[br] SEO & why do you need it?
+     +section-descr Distinctively exploit optimal alignments for intuitive bandwidth. Quickly coordinate e-business applications through revolutionary.
+     .promote-list
+      each it in need
+       .promote.promote--1
+        .promote__left
+         i.ic.ic--circle(class=`${'ic--' + it.color}`)
+          +svg-sprite(`${it.icon}`).arrow-down(width=`${it.icon_width}` viewBox='0 0 32 32')
+        .promote__right
+         +article-title #{it.title}
+         +article-descr #{it.descr}
+

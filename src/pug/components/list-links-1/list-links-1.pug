@@ -1,0 +1,20 @@
+include ../svg-sprite/svg-sprite
+mixin list-links-1(list)
+ nav.list-links-1&attributes(attributes)
+  ul.__ul.d-flex.justify-content-end
+   each it in list
+    if it.title !== 'Features'
+     li.__li
+      a.__a(href='#') #{it.title}
+    else
+     li.__li.position-relative.dd-mark
+      a.__a.position-relative(href='#') #{it.title}
+       +svg-sprite('icon-arrow-gray-bottom').arrow-down(width='8' height='5' viewBox='0 0 8 5')
+      .dd
+       .dd__inner
+        ul.__ul
+         each it in list
+          if it.title !== 'Features'
+           li.__li
+            a.__a(href='#') #{it.title}
+   block

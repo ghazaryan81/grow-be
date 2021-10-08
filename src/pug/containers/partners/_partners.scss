@@ -1,0 +1,21 @@
+.partners {
+ min-height: 209px;
+ &__item {
+  padding-bottom: 31px;
+  padding-left: 15px;
+  padding-right: 15px;
+ } // .partners__item
+ &__img {
+  max-width: 100%;
+ } // .partners__img
+} // .partners
+
+.container {
+ // container
+ &--partners {
+  @include padding-y(32px);
+  @include md {
+   @include padding-y(0);
+  } // .container--partners @include md
+ } // .container--partners
+} // .container

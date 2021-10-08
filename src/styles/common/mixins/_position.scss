@@ -1,0 +1,29 @@
+@mixin p($position, $top: 0, $left: 0) {
+ position: $position;
+ top: $top;
+ left: $left;
+} // @mixin p($position, $top: 0, $left: 0)
+
+@mixin ptl($position, $top: 0, $left: $top) {
+ position: $position;
+ top: $top;
+ left: $left;
+} // @mixin ptl($position, $top: 0, $left: $top)
+
+@mixin ptr($position, $top: 0, $right: $top) {
+ position: $position;
+ top: $top;
+ right: $right;
+} // @mixin ptr($position, $top: 0, $right: $top)
+
+@mixin pbl($position, $bottom: 0, $left: $bottom) {
+ position: $position;
+ left: $left;
+ bottom: $bottom;
+} // @mixin pbl($position, $bottom: 0, $left: $bottom)
+
+@mixin pbr($position, $bottom: 0, $right: $bottom) {
+ position: $position;
+ right: $right;
+ bottom: $bottom;
+} // @mixin pbr($position, $bottom: 0, $right: $bottom)

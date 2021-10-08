@@ -1,0 +1,15 @@
+include ../../components/section-title/section-title
+include ../../components/section-descr/section-descr
+
+mixin plans()
+ section.plans
+  .container.container--plans
+   .row.row--margin-x--0
+    .col-12.text-center
+     +section-title Our Plans
+     +section-descr Choose the right SEO for you
+  .container
+   .row.row--margin-x--0
+    .col-12.text-center
+     .col-md-4.col-sm-12.d-flex.justify-content-center.align-items-start
+      .plan-card

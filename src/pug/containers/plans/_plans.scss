@@ -1,0 +1,78 @@
+@import '../../components/section-title/section-title';
+@import '../../components/section-descr/section-descr';
+
+.plans {
+ min-height: 912px;
+ background-color: $section-choose-bg;
+ background-image: url(../img/plans.png);
+ background-repeat: no-repeat;
+ background-position: center top;
+ .section-title {
+  padding-top: 89px;
+  text-align: center;
+ } // .plans .section-title
+ .section-descr {
+  text-align: center;
+  @include padding-y(12px, 27px);
+ } // .plans .section-descr
+} // .plans
+
+.plans-panel {
+ margin-top: 30px;
+ display: block;
+ min-height: 514px;
+ background: var(--panel-bg);
+ opacity: 0.5;
+ @include transition(box-shadow);
+ &:hover {
+  box-shadow: var(--plans-panel--hover--box-shadow);
+ } // .plans-panel:hover
+} // .plans-panel
+
+.plans-panel {
+ padding-top: 62px;
+ text-align: center;
+ &--margin-top {
+  margin-top: 60px;
+ } // .plans-panel--margin-top
+
+ &--beginer {
+  padding-top: 92px;
+  min-height: 574px;
+ } // .plans-panel--beginer
+
+ .__label {
+  display: block;
+  color: var(--title-1);
+  @include font(24px, 150%, 500);
+ } // .plans-panel .__label
+ .__price {
+  color: var(--title-1);
+  @include font(18px, 150%, 600);
+ } // .plans-panel .__price
+ .__price-numb {
+  margin-left: 33px;
+  @include font(70px, 150%, 500);
+  @include p(relative);
+ } // .plans-panel .__price-numb
+ .__price-period {
+  color: var(--title-1);
+  @include font(18px, 150%, 600);
+  @include p(relative, 2px, -17px);
+ } // .plans-panel .__price-period
+ .__price-symbol {
+  display: flex;
+  align-items: flex-start;
+  font-size: 0;
+  font-style: normal;
+  text-decoration: none;
+  @include p(absolute, 19px, -16px);
+ } // .plans-panel .__price-symbol
+
+ .__list {
+  list-style: none;
+ } // .plans-panel .__list
+ .__list-it {
+  list-style: none;
+ } // .plans-panel .__list-it
+} // .plans-panel

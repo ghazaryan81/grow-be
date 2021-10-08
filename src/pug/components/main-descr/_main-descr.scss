@@ -1,0 +1,15 @@
+.main-descr {
+ $font-size-map: (
+  1200px: 20px,
+  368px: 16px,
+ );
+ color: var(--text-1);
+
+ @include font(20px, 24px, 500);
+
+ @include fluid('font-size', $font-size-map);
+
+ @include xl {
+  line-height: 140%;
+ } // .main-descr @include xl
+} // .main-descr
